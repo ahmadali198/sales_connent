@@ -1,0 +1,54 @@
+.eco-wrap { position: relative; width: 520px; height: 520px; margin-top: -40px; }
+
+.orbit-ring { position: absolute; top: 50%; left: 50%; border-radius: 50%; border: 1px dashed rgba(255,255,255,0.1); pointer-events: none; }
+.orbit-1 { width: 260px; height: 260px; transform: translate(-50%,-50%); animation: eco-spin 28s linear infinite; }
+.orbit-2 { width: 430px; height: 430px; transform: translate(-50%,-50%); animation: eco-spin 42s linear infinite reverse; }
+@keyframes eco-spin { from{transform:translate(-50%,-50%) rotate(0deg)} to{transform:translate(-50%,-50%) rotate(360deg)} }
+
+.central-hub {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 114px; height: 114px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+  border: 2px solid rgba(255,255,255,0.55);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  z-index: 20; backdrop-filter: blur(12px);
+  animation: hub-breathe 3s ease-in-out infinite;
+}
+
+@keyframes hub-breathe {
+  0%,100% { box-shadow: 0 0 0 18px rgba(255,255,255,0.04), 0 0 52px rgba(255,255,255,0.12); }
+  50%     { box-shadow: 0 0 0 28px rgba(255,255,255,0.03), 0 0 90px rgba(255,255,255,0.22); }
+}
+.c-icon  { font-size: 34px; line-height: 1; }
+.c-label { font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+
+.sat-hub {
+  position: absolute; width: 96px; height: 96px; border-radius: 18px;
+  background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.22);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  backdrop-filter: blur(14px); z-index: 20; cursor: default;
+  transition: border-color .3s, box-shadow .3s;
+}
+.sat-hub:hover { border-color: rgba(255,255,255,0.7); box-shadow: 0 0 30px rgba(255,255,255,0.2); }
+.s-icon { font-size: 25px; }
+.s-name { font-size: 9px;  font-weight: 700; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 0.06em; }
+.s-sub  { font-size: 7.5px; color: rgba(255,255,255,0.45); text-align: center; }
+
+/* Hex positions — scaled 1.3× */
+.sh-0 { top: calc(50% - 192px); left: 50%;                transform: translate(-50%,-50%); animation: hf0 4.0s ease-in-out infinite; }
+.sh-1 { top: calc(50% - 96px);  left: calc(50% + 166px);  transform: translate(-50%,-50%); animation: hf1 4.5s ease-in-out infinite; }
+.sh-2 { top: calc(50% + 96px);  left: calc(50% + 166px);  transform: translate(-50%,-50%); animation: hf2 3.8s ease-in-out infinite; }
+.sh-3 { top: calc(50% + 192px); left: 50%;                transform: translate(-50%,-50%); animation: hf3 4.2s ease-in-out infinite; }
+.sh-4 { top: calc(50% + 96px);  left: calc(50% - 166px);  transform: translate(-50%,-50%); animation: hf4 3.6s ease-in-out infinite; }
+.sh-5 { top: calc(50% - 96px);  left: calc(50% - 166px);  transform: translate(-50%,-50%); animation: hf5 4.8s ease-in-out infinite; }
+
+@keyframes hf0{0%,100%{transform:translate(-50%,-50%) translateY(0)} 50%{transform:translate(-50%,-50%) translateY(-8px)}}
+@keyframes hf1{0%,100%{transform:translate(-50%,-50%) translateY(0)} 50%{transform:translate(-50%,-50%) translateY(-6px)}}
+@keyframes hf2{0%,100%{transform:translate(-50%,-50%) translateY(0)} 50%{transform:translate(-50%,-50%) translateY(6px)}}
+@keyframes hf3{0%,100%{transform:translate(-50%,-50%) translateY(0)} 50%{transform:translate(-50%,-50%) translateY(8px)}}
+@keyframes hf4{0%,100%{transform:translate(-50%,-50%) translateY(0)} 50%{transform:translate(-50%,-50%) translateY(6px)}}
+@keyframes hf5{0%,100%{transform:translate(-50%,-50%) translateY(0)} 50%{transform:translate(-50%,-50%) translateY(-6px)}}
+
+.eco-svg   { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; margin-top: 0%; }
+.flow-line { fill: none; stroke: rgba(255,255,255,0.12); stroke-width: 1.2; }
+.particle  { fill: rgba(255,255,255,0.85); }

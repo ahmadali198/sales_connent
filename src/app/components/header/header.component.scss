@@ -1,0 +1,19 @@
+/* Normal nav links already styled by your classes */
+
+.cta-link {
+  padding: 0.4rem 1rem;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  color: #007bff;
+  background: transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #007bff;
+    color: #fff;
+  }
+}
+img[alt="SalesConnect Logo"] {
+  max-height: 94px;   // adjust as needed
+  width: auto;        // keeps aspect ratio
+}
