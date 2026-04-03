@@ -9,6 +9,7 @@ import { RouterLink, RouterModule } from "@angular/router";
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
+
 export class FooterComponent {
 
   quickLinks = [

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    overflow-x: hidden;
+}
+
 .custom-border {
     border: 5px solid;
     border-image-source: linear-gradient(90deg, #19ACE3 0%, #013151 100%);

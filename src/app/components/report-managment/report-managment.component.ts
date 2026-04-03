@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './report-managment.component.html',
   styleUrl: './report-managment.component.scss'
 })
+
 export class ReportManagmentComponent {
   reportItems: string[] = [
     "Primary Sale Report",

@@ -19,7 +19,8 @@
   0%,100% { box-shadow: 0 0 0 18px rgba(255,255,255,0.04), 0 0 52px rgba(255,255,255,0.12); }
   50%     { box-shadow: 0 0 0 28px rgba(255,255,255,0.03), 0 0 90px rgba(255,255,255,0.22); }
 }
-.c-icon  { font-size: 34px; line-height: 1; }
+
+.c-icon  { font-size: 50px; line-height: 1; }
 .c-label { font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
 
 .sat-hub {
@@ -30,7 +31,7 @@
   transition: border-color .3s, box-shadow .3s;
 }
 .sat-hub:hover { border-color: rgba(255,255,255,0.7); box-shadow: 0 0 30px rgba(255,255,255,0.2); }
-.s-icon { font-size: 25px; }
+.s-icon { font-size: 30px; }
 .s-name { font-size: 9px;  font-weight: 700; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 0.06em; }
 .s-sub  { font-size: 7.5px; color: rgba(255,255,255,0.45); text-align: center; }
 
